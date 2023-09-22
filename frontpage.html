@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"> <head> <style> /* Style the video element */ video { width: 900px; height: 400px; margin: 20px auto; display: block; }
+
+    /* Style the table element */
+    table {
+      width: 600px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    
+    /* Style the table cells */
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    </style> </head> <body> <!-- Create a video element with two source files --> <video id=“video” controls> <source src=“video.mp4” type=“video/mp4”> <source src=“video.ogg” type=“video/ogg”> Your browser does not support the video tag. </video>
+    
+    <!-- Create a table element with some dummy data --> <table id=“table” hidden> <tr> <td>Name</td> <td>Age</td> <td>Gender</td> </tr> <tr> <td>Alice</td> <td>25</td> <td>Female</td> </tr> <tr> <td>Bob</td> <td>30</td> <td>Male</td> </tr> <tr> <td>Charlie</td> <td>35</td> <td>Male</td> </tr> </table>
+    
+    <!-- Create a script element to handle keyboard events --> <script> // Get the video and table elements by their ids var video = document.getElementById(“video”); var table = document.getElementById(“table”);
+    
+    // Add an event listener for keydown events
+    document.addEventListener("keydown", function(event) {
+      // Get the key code of the pressed key
+      var key = event.keyCode;
+    
+      // If the key is "V", toggle the visibility of the video element
+      if (key == 86) {
+        if (video.hidden) {
+          video.hidden = false;
+        } else {
+          video.hidden = true;
+        }
+      }
+    
+      // If the key is "D", toggle the visibility of the table element
+      if (key == 68) {
+        if (table.hidden) {
+          table.hidden = false;
+        } else {
+          table.hidden = true;
+        }
+      }
+    });
+    
+    </script> </body> </html>
+    
+    
